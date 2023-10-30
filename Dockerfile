@@ -8,7 +8,7 @@ WORKDIR /home/wekiki/gradle/project
 COPY . .
 
 # gradle 빌드 시 proxy 설정을 gradle.properties에 추가
-RUN echo "systemProp.http.proxyHost=krmp-proxy.9rum.cc\nsystemProp.http.proxyPort=3128\nsystemProp.https.proxyHost=krmp-proxy.9rum.cc\nsystemProp.https.proxyPort=3128" > /root/.gradle/gradle.properties
+RUN echo "systemProp.http.proxyHost=krmp-proxy.9rum.cc\nsystemProp.http.proxyPort=3128\nsystemProp.https.proxyHost=krmp-proxy.9rum.cc\nsystemProp.https.proxyPort=3128" > /root/wekiki/.gradle/gradle.properties
 
 # gradlew를 이용한 프로젝트 필드
 RUN chmod +x ./wekiki/gradlew
@@ -19,4 +19,4 @@ RUN ./wekiki/gradlew clean build
 ENV DATABASE_URL=jdbc:mariadb://mariadb/krampoline
 
 # 빌드 결과 jar 파일을 실행
-CMD ["java", "-jar", "-Dspring.profiles.active=prod", "/home/wekiki/gradle/project/build/libs/wekiki-0.0.1.jar"]
+CMD ["java", "-jar", "-Dspring.profiles.active=prod", "/home/wekiki/gradle/project/build/libs/wekiki-0.0.1-SNAPSHOT.jar"]
