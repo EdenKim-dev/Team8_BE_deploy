@@ -7,13 +7,14 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:test;MODE=MariaDB
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true
+    url: ${DATABASE_URL}?allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: root
+  redis:
+    host: redis-service
+    port: 6379
+    timeout: 3000
   jpa:
     hibernate:
       ddl-auto: create
