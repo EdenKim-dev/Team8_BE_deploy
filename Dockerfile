@@ -15,7 +15,7 @@ RUN chmod +x ./wekiki/gradlew
 
 RUN cd ./wekiki && ./gradlew clean build
 
-COPY --from=builder /home/gradle/project/build/libs/wekiki-0.0.1-SNAPSHOT.jar .
+COPY --from=builder /home/wekiki/gradle/project/build/libs/wekiki-0.0.1-SNAPSHOT.jar .
 
 # DATABASE_URL을 환경 변수로 삽입
 ENV DATABASE_URL=jdbc:mariadb://mariadb/krampoline
