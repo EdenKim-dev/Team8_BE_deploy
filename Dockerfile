@@ -19,4 +19,4 @@ RUN cd ./wekiki && ./gradlew clean build
 ENV DATABASE_URL=jdbc:mariadb://mariadb/krampoline
 
 # 빌드 결과 jar 파일을 실행
-CMD ["java", "-jar", "-Dspring.profiles.active=prod", "/home/wekiki/gradle/project/build/libs/wekiki-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "-Dspring.profiles.active=prod", "./gradle/project/build/libs/wekiki-0.0.1-SNAPSHOT.jar"]
