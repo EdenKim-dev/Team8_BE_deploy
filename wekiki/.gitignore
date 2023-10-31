@@ -1,5 +1,6 @@
 HELP.md
 .gradle
+!gradle/wrapper/gradle-wrapper.jar
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -50,7 +51,6 @@ out/
 
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
