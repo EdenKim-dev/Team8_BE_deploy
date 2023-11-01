@@ -38,10 +38,6 @@ spec:
           readinessProbe:
             tcpSocket:
               port: 3306
-      volumes:
-        - name: init-db
-          configMap:
-            name: init-db
   volumeClaimTemplates:
     - metadata:
         name: data
