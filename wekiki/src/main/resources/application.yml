@@ -11,10 +11,6 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: root
-  redis:
-    host: redis-service
-    port: 6379
-    timeout: 3000
   jpa:
     hibernate:
       ddl-auto: create
@@ -27,9 +23,9 @@ spring:
   data:
     storage-type: redis
     redis:
-      host: localhost
+      host: redis-service
       port: 6379
-      password: zinc
+      timeout: 3000
   mail:
     host: smtp.gmail.com
     port: 587
