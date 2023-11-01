@@ -12,7 +12,7 @@ spring:
     # driver-class-name: org.h2.Driver
     # username: sa
     # password:
-    url: ${DATABASE_URL}localhost?allowPublicKeyRetrieval=true&useSSL=false
+    url: ${DATABASE_URL}?allowPublicKeyRetrieval=true&useSSL=false
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: root
